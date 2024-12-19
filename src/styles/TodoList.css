@@ -1,0 +1,117 @@
+.todo-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.todo-container h2 {
+  text-align: center;
+  color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.todo-container input {
+  width: 80%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  margin-right: 3px;
+}
+
+.todo-container button {
+  padding: 0.75rem 1.5rem;
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  width: 18%;
+}
+
+.todo-container button:hover {
+  background-color: #8e24aa;
+}
+
+.todo-container button:active {
+  transform: scale(0.98);
+}
+
+.todo-list {
+  margin-top: 1rem;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 4px;
+}
+
+.todo-item:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.02);
+}
+
+.todo-item span {
+  text-transform: capitalize;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.todo-item button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff5252;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  min-width: 80px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.todo-item button:hover {
+  background-color: #ff1744;
+}
+
+.todo-item button:active {
+  transform: scale(0.95);
+}
+
+.todo-item button:nth-child(2) {
+  background-color: #ff9800;
+}
+
+.todo-item button:nth-child(2):hover {
+  background-color: #f57c00;
+}
+
+.todo-item button:nth-child(2):active {
+  transform: scale(0.95);
+}
