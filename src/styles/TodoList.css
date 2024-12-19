@@ -1,3 +1,6 @@
+.contain{
+  height: 100vh;
+}
 .todo-container {
   width: 90%;
   max-width: 600px;
@@ -7,6 +10,7 @@
   font-family: 'Arial', sans-serif;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
 }
 
 .todo-container h2 {

@@ -35,6 +35,9 @@ export default function App() {
               <Route path="/employees" element={<EmployeeList />} />
             </Routes>
           </main>
+          <footer>
+            <p>&#169; 2024 Developed by Shaurya Soni. All rights reserved.</p>
+          </footer>
         </Router>
       )}
     </div>

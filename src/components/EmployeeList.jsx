@@ -8,10 +8,12 @@ export default function EmployeeList() {
   const { data: employees, status } = useSelector(state => state.employees);
 
   useEffect(() => {
-    dispatch(fetchEmployees());
-  }, [dispatch]);
 
-  
+    if (status === 'idle') {
+      dispatch(fetchEmployees());
+    }
+  }, [dispatch, status]);
+
   if (status === 'failed') return <p className="error-message">Failed to fetch employees. Please try again later.</p>;
 
   return (

@@ -20,6 +20,8 @@ export default function TodoList() {
   };
 
   return (
+    
+    <div className="contain">
     <div className="todo-container">
       <h2>Todo List</h2>
       <div>
@@ -44,6 +46,7 @@ export default function TodoList() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
