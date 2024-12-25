@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -15,7 +14,6 @@ header {
   align-items: center;
   padding: 10px 2rem;
   background-color: rgba(30, 42, 71, 0.8);
-  box-shadow: none;
   border-bottom: 2px solid #000;
   backdrop-filter: blur(10px);
   width: 100%;
@@ -25,12 +23,14 @@ header {
   color: white;
   font-size: 1.8rem;
   font-weight: bold;
+  text-align: left;
 }
 
 nav {
   display: flex;
   gap: 20px;
-  background-color: transparent;
+  flex-wrap: nowrap; /* Ensure no wrapping on normal screens */
+  overflow: hidden; /* Prevent overflow */
 }
 
 nav a {
@@ -38,11 +38,12 @@ nav a {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: transparent;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap; /* Keep text in a single line */
 }
 
 nav a:hover {
@@ -52,7 +53,7 @@ nav a:hover {
 
 main {
   padding: 20px;
-  flex-grow: 1; 
+  flex-grow: 1;
   background-color: #e3f2fd;
 }
 
@@ -64,4 +65,39 @@ footer {
   width: 100%;
   position: relative;
   bottom: 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 10px;
+    justify-content: center; /* Center the navigation links */
+    flex-wrap: nowrap; /* Keep them in one line */
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 1rem;
+  }
+
+  .company-name {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: nowrap; /* Ensure no wrapping */
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    white-space: nowrap;
+  }
 }

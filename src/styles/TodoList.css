@@ -1,6 +1,7 @@
-.contain{
+.contain {
   height: 100vh;
 }
+
 .todo-container {
   width: 90%;
   max-width: 600px;
@@ -10,7 +11,7 @@
   font-family: 'Arial', sans-serif;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  
+  box-sizing: border-box;
 }
 
 .todo-container h2 {
@@ -29,13 +30,14 @@
 }
 
 .todo-container input {
-  width: 80%;
+  width: 75%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   font-size: 1rem;
   border-radius: 4px;
   transition: border-color 0.3s ease;
-  margin-right: 3px;
+  margin-right: 10px;
+  box-sizing: border-box;
 }
 
 .todo-container button {
@@ -48,6 +50,7 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
   width: 18%;
+  box-sizing: border-box;
 }
 
 .todo-container button:hover {
@@ -72,6 +75,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease, transform 0.2s ease;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .todo-item:hover {
@@ -84,6 +88,22 @@
   color: #000;
   font-size: 1.2rem;
   font-weight: 500;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow-x: auto;
+  max-width: calc(100% - 140px);
+  display: inline-block;
+  cursor: grab;
+}
+
+.todo-item span:active {
+  cursor: grabbing;
+}
+
+.todo-item div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .todo-item button {
@@ -96,9 +116,10 @@
   border: none;
   border-radius: 4px;
   width: auto;
-  min-width: 80px;
+  min-width: 70px;
   text-align: center;
   font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .todo-item button:hover {
@@ -119,4 +140,77 @@
 
 .todo-item button:nth-child(2):active {
   transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .todo-container {
+    padding: 1.5rem;
+  }
+
+  .todo-container input {
+    width: 70%;
+    padding: 0.65rem;
+    margin-right: 5px;
+  }
+
+  .todo-container button {
+    width: 22%;
+    padding: 0.65rem 1.2rem;
+    margin-left: 5px;
+  }
+
+  .todo-item {
+    flex-wrap: nowrap;
+  }
+
+  .todo-item span {
+    font-size: 1.1rem;
+    max-width: calc(100% - 120px);
+  }
+
+  .todo-item button {
+    width: auto;
+    margin-left: 5px;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .todo-item div {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-container input {
+    width: 60%;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-right: 5px;
+  }
+
+  .todo-container button {
+    width: 28%;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-left: 5px;
+  }
+
+  .todo-item {
+    padding: 0.8rem;
+  }
+
+  .todo-item span {
+    font-size: 0.9rem;
+    max-width: calc(100% - 100px);
+  }
+
+  .todo-item button {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  .todo-item div {
+    gap: 0px;
+  }
 }
